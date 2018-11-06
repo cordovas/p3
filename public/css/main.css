@@ -1,0 +1,38 @@
+
+
+body {
+    width:500px;
+    min-width:300px;
+    text-align;center;
+    margin: 100px auto;
+}
+img {
+    display: block;
+    margin: 0 auto;
+
+}
+h1,h2 {
+    text-align: center;
+}
+
+.questions {
+
+    margin: 20px;
+
+}
+
+img {
+    margin: 20px;
+}
+
+.top-spacing {
+    margin-top: 40px;
+}
+
+#emailHelp {
+    color: red;
+}
+
+.textColor {
+    color: red;
+}

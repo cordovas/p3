@@ -11,8 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
-Route::get('/test', 'LotteryTicketController@index');
+Route::get('/', 'LotteryTicketController@index');
+Route::get('/search-process', 'LotteryTicketController@searchProcess');

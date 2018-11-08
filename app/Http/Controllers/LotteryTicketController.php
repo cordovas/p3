@@ -10,4 +10,17 @@ class LotteryTicketController extends Controller
     {
         return view('layouts.show');
     }
+
+    /**
+     * GET
+     * /books/search-process
+     * Process the form to search for a book
+     */
+    public function searchProcess()
+    {
+        return "Hola";
+    }
+
 }
+
+

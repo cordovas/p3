@@ -6,6 +6,8 @@
 
 @section('content')
 
+    <h2> How to win the lottery </h2>
+
     <form action='search.php' method='GET'>
         <div class="form-group">
             <label for="numberRange">Total numbers:</label>

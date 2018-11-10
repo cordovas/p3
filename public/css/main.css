@@ -11,7 +11,7 @@ img {
     margin: 0 auto;
 
 }
-h1,h2 {
+h1,h2, h3 {
     text-align: center;
 }
 
@@ -35,4 +35,18 @@ img {
 
 .textColor {
     color: red;
+}
+
+.requiredText {
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 20px;
+    color: #0057E6;
+
+}
+
+p {
+    text-align: center;
+    margin-bottom: 2px;
+
 }

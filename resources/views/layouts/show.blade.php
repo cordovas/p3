@@ -6,25 +6,34 @@
 
 @section('content')
 
-    <h2> How to win the lottery </h2>
+    <h3> Generate your lucky numbers below! </h3>
+    <p> A quick little tool that generates a random selection of numbers from a range of numbers specified below. </p>
+    <p class='requiredText textColor'> * Required fields </p>
 
     <form action='/p3/public/search-process' method='GET'>
 
         <div class="form-group">
-            <label for="numberRange">Total numbers:</label>
-            <input type="text"
-                   class="form-control"
-                   id="numberRange"
-                   name='totalNumbers'
-                   placeholder="How many numbers are in the range?"
-                   value='<?= $totalNumbers ?? '' ?>'>
-            <?php if (isset($errors)) : ?>
-            <small id="emailHelp" class="form-text textColor">
-                <?php foreach ($errors as $error) : ?>
-                    <?= $error ?>
-                <?php endforeach; ?>
-            </small>
-            <?php endif ?>
+            <label for="numberRange"> * Total numbers (up to 100):</label>
+            @if(count($errors) > 0)
+                <input type="text"
+                       class="form-control"
+                       id="numberRange"
+                       name='totalNumbers'
+                       placeholder="How many numbers are in the range?"
+                       value='{{old('totalNumbers')}}'>
+                <small id="emailHelp" class="form-text">
+                    @foreach($errors->all() as $error)
+                        {{$error}}
+                    @endforeach
+                </small>
+            @else
+                <input type="text"
+                       class="form-control"
+                       id="numberRange"
+                       name='totalNumbers'
+                       placeholder="How many numbers are in the range?"
+                       value='{{$totalNumbers}}'>
+            @endif
         </div>
 
 
@@ -62,9 +71,9 @@
 
     @if($showOdds)
 
-    <div class="alert alert-warning" role="alert">
-    Your odds of winning are 1 in {{$oddResults}}
-    </div>
+        <div class="alert alert-warning" role="alert">
+            Your odds of winning are 1 in {{$oddResults}}
+        </div>
 
     @endif
 

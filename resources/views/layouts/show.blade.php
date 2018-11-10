@@ -17,7 +17,7 @@
                    id="numberRange"
                    name='totalNumbers'
                    placeholder="How many numbers are in the range?"
-                   value='<?= $totalNumbers ?? '' ?>' >
+                   value='<?= $totalNumbers ?? '' ?>'>
             <?php if (isset($errors)) : ?>
             <small id="emailHelp" class="form-text textColor">
                 <?php foreach ($errors as $error) : ?>
@@ -31,13 +31,14 @@
         <div class="form-group">
             <label for="numberSelection">Random number quantity?</label>
             <select class="form-control" name='randomNumbers' id="numberSelection">
-                <option value="1" <?php if (isset($randomNumbers) and $randomNumbers == 1) echo 'selected' ?>>1</option>
-                <option value="2" <?php if (isset($randomNumbers) and $randomNumbers == 2) echo 'selected' ?>>2</option>
-                <option value="3" <?php if (isset($randomNumbers) and $randomNumbers == 3) echo 'selected' ?>>3</option>
-                <option value="4" <?php if (isset($randomNumbers) and $randomNumbers == 4) echo 'selected' ?>>4</option>
-                <option value="5" <?php if (isset($randomNumbers) and $randomNumbers == 5) echo 'selected' ?>>5</option>
-                <option value="6" <?php if (isset($randomNumbers) and $randomNumbers == 6) echo 'selected' ?>>6</option>
-                <option value="7" <?php if (isset($randomNumbers) and $randomNumbers == 7) echo 'selected' ?>>7</option>
+                <option value="1" @if($randomNumbers and $randomNumbers == 1) {{ 'selected' }} @endif>1</option>
+                <option value="2" @if($randomNumbers and $randomNumbers == 2) {{ 'selected' }} @endif>2</option>
+                <option value="3" @if($randomNumbers and $randomNumbers == 3) {{ 'selected' }} @endif>3</option>
+                <option value="4" @if($randomNumbers and $randomNumbers == 4) {{ 'selected' }} @endif>4</option>
+                <option value="5" @if($randomNumbers and $randomNumbers == 5) {{ 'selected' }} @endif>5</option>
+                <option value="6" @if($randomNumbers and $randomNumbers == 6) {{ 'selected' }} @endif>6</option>
+                <option value="7" @if($randomNumbers and $randomNumbers == 7) {{ 'selected' }} @endif>7</option>
+
             </select>
         </div>
 
@@ -45,35 +46,27 @@
             <input type="checkbox"
                    class="form-check-input"
                    id="odds"
-                   name='showOdds' <?php if (isset($showOdds) and $showOdds) echo 'checked' ?> >
+                   name='showOdds' {{ ($showOdds) ? 'checked' : ''}} >
             <label class="form-check-label" for="odds">Show me my odds!</label>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 
-    {{--<?php if (isset($errors) && (count($errors) == 0)) : ?>--}}
-
-    {{--<?php if (isset($totalNumbers)) : ?>--}}
-
-    {{--<div class="alert alert-primary top-spacing" role="alert">--}}
-        {{--Your amazingly lucky numbers are:--}}
-        {{--<?php echo implode(', ', $lotteryList); ?>--}}
-    {{--</div>--}}
-
-    {{--<?php endif; ?>--}}
-
-    {{--<?php if (isset($showOdds)) : ?>--}}
-
-    {{--<div class="alert alert-warning" role="alert">--}}
-        {{--Your odds of winning are 1 in--}}
-        {{--<?php echo $oddResults; ?>--}}
-    {{--</div>--}}
-
-    {{--<?php endif; ?>--}}
-    {{--<?php endif; ?>--}}
+    @if ($totalNumbers)
+        <div class="alert alert-primary top-spacing" role="alert">
+            Your amazingly lucky numbers are:
+            {{ implode(', ', $lotteryList) }}
+        </div>
+    @endif()
 
 
-    {{--<p style='margin-top: 100px;'>--}}
+    @if($showOdds)
 
-    {{--</p>--}}
+    <div class="alert alert-warning" role="alert">
+    Your odds of winning are 1 in {{$oddResults}}
+    </div>
+
+    @endif
+
+
 @endsection

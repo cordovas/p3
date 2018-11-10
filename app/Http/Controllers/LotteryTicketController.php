@@ -70,25 +70,6 @@ class LotteryTicketController extends Controller
 
     }
 
-//    public function store(Request $request) {
-//
-//        # Validate the request data
-//        $request->validate([
-//            'totalNumbers' => 'required|digit',
-//            'author' => 'required',
-//            'published_year' => 'required|digits:4',
-//            'cover_url' => 'required|url',
-//            'purchase_url' => 'required|url'
-//        ]);
-//
-//        # Note: If validation fails, it will redirect the visitor back to the form page
-//        # and none of the code that follows will execute.
-//
-//        # Code will eventually go here to add the book to the database,
-//        # but for now we'll just dump the form data to the page for proof of concept
-//        dump($request->all());
-//    }
-
 }
 
 

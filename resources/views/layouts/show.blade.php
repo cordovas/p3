@@ -10,7 +10,7 @@
     <p> A quick little tool that generates a random selection of numbers from a range of numbers specified below. </p>
     <p class='requiredText textColor'> * Required fields </p>
 
-    <form action='/p3/public/search-process' method='GET'>
+    <form action='/search-process' method='GET'>
 
         <div class="form-group">
             <label for="numberRange"> * Total numbers (up to 100):</label>

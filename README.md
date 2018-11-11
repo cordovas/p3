@@ -5,6 +5,7 @@
 ## Outside resources
 *I had to brush up on my math and probabilities so i went to the [wikipedia page](https://en.wikipedia.org/wiki/Lottery_mathematics) on lottery mathematics*
 * [Bootstrap 4.1.3](https://getbootstrap.com/docs/4.1/getting-started/introduction/)*
+*Simpsons gif from [giphy](giphy.com)
 
 ## 3 Unique inputs
 *(1) Text input to indicate the quantity of numbers to pull from.  

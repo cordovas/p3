@@ -8,8 +8,6 @@ class LotteryTicketController extends Controller
 {
     public function index(Request $request)
     {
-
-
         return view('layouts.show')->with([
             'totalNumbers' => $request->session()->get('totalNumbers', ''),
             'randomNumbers' => $request->session()->get('randomNumbers', ''),
@@ -21,7 +19,6 @@ class LotteryTicketController extends Controller
 
     public function searchProcess(Request $request)
     {
-
         $request->validate([
             'totalNumbers' => 'required|numeric|min:1|max:100',
         ]);
@@ -65,9 +62,6 @@ class LotteryTicketController extends Controller
             'lotteryList' => $lotteryList,
             'oddResults' => $oddResults
         ]);
-
-
-
     }
 
 }

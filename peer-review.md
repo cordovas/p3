@@ -1,12 +1,11 @@
 ## P3 Peer Review
 
 + Reviewer's name: Steve Cordova    
-+ Reviwee's name: Chris Crane
-+ URL to Reviewe's P3 Github Repo URL: *<https://github.com/ccrane/p3-dwa>*
++ Reviewee's name: Chris Crane
++ URL to Reviewee's P3 Github Repo URL: *<https://github.com/ccrane/p3-dwa>*
 
 
 ## 1. Interface
-Address as many of the following points as applicable:
 
 + My initial impression of the site is very positive. It's a clean layout and partially responsive. It looks like a widget. It has a great logo and looks like it can be part of any professional website. The instructions were well laid out and there was little confusion as to what the intent was.
 + The only bit of confusion I had was the text input field for amount. I think it would be best to have two input text fields that would populate after you convert one currency to the other. The average rate period was at first glance confusing if you didn't read the instructions first.
@@ -35,7 +34,6 @@ Address as many of the following points as applicable:
 + I understood every blade call and syntax used
 
 ## 5. Code: General
-Address as many of the following points as applicable:
 
 + There were no visible inconsistincies in Chris's code. In fact, everything was nicely indented and easy to follow
 + Most every best practice was seen in the code

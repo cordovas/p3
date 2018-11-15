@@ -1,61 +1,47 @@
 ## P3 Peer Review
 
-+ Reviewer's name: 
-+ Reviwee's name: 
-+ URL to Reviewe's P3 Github Repo URL: *<https://github.com/example/p3>*
++ Reviewer's name: Steve Cordova    
++ Reviwee's name: Chris Crane
++ URL to Reviewe's P3 Github Repo URL: *<https://github.com/ccrane/p3-dwa>*
 
-*Answer the following questions in regards to the student's project you are reviewing. REMOVE THE INSTRUCTIONS FOR EACH PROMPT when complete. We should only see YOUR ANSWERS.*
 
 ## 1. Interface
 Address as many of the following points as applicable:
 
-+ What are your initial impressions of the site interface?
-+ Were there any parts of the interface that you found confusing, or did not work as you expected?
-+ Were there any parts of the interface that you thought worked notably well?
-+ Do you have any suggestions for improvements on the interface?
++ My initial impression of the site is very positive. It's a clean layout and partially responsive. It looks like a widget. It has a great logo and looks like it can be part of any professional website. The instructions were well laid out and there was little confusion as to what the intent was.
++ The only bit of confusion I had was the text input field for amount. I think it would be best to have two input text fields that would populate after you convert one currency to the other. The average rate period was at first glance confusing if you didn't read the instructions first.
++ The fact that nearly every country's currency, commodities, and even bitcoin was listed as an option is impressive. I never thought of factoring a period of time as a data point for currency conversion, but I can see how that would be helpful.
++ As previously mentioned, I would have another text input field in proximity to the other currency dropdown where the answer would populate instead of below the widget.
 
 
 ## 2. Functional testing
-One challenge of developing software is thinking of all the unexpected ways users might interact with our applications. It's easy to develop &ldquo;blinders&rdquo; to methods of interaction because we know so much about *how* our application works, and so we have a hard time imagining how our interfaces might be misinterpreted. Thus, it can be useful to have an outsider rigorously test our applications with the explicit intention of trying to break it.
 
-Knowing this, it's time to put your reviewee's application to the test. Think of all the unexpected ways their application could be used with the intention of trying to produce some unexpected/undesirable outcome.
-
-Examples...
-+ Try submitting a form without entering any data
-+ Try submitting a form with entering data in only some of the fields
-+ If an input is asking for a number, try entering some of the following combinations: decimal numbers, negative numbers, letters, symbols, an extremely large number, etc.
-+ Try and access a URL on their site that likely does not exist (e.g. http://a3.domain.com/asdjfks)
-+ Etc.
-
-__Summarize what you tried, and describe any unexpected/undesirable outcomes.__
-
-(Even if you don't find any issues, having the reviewee see what you tried might give them insight into things they did not think to test.)
-
++ Submitted negative numbers, alphanumeric characters, and blank inputs and got all the appropriate error messages 
++ I selected obscure options like Gold (XAU) and input a decimal and was told that I needed to input a valid value but never said it had to be a whole integer.
++ I input a ridiculously large number and the error message I got was "enter a number". A limit wasn't set
++ I added folder names to the url and never got a 404 page. Any folder name I added always pushed me to the main page as a fallback
 
 
 ## 3. Code: Routes
-Skim through the student's code on Github.
 
-Find their routes file (`routes/web.php`). Thinking about ideal Route/Controller organization&mdash; is there any code in this file that should be happening in a Controller?
++ The routes file is clean and has no code that should be in a controller
 
-If yes, describe.
 
 ## 4. Code: Views
-Skim through the View files in `/resources/views` and address as many of the following points as applicable:
 
-+ Is template inheritance used?
-+ Are there any separation of concern issues (i.e. non-display specific logic in view files)?
-+ Did they do anything in PHP that could have been done in Blade?
-+ Did they use any Blade syntax/techniques you were unfamiliar with?
++ Template inheritance is used
++ No issues of concern in the view files. There was no non-display logic used in the blade file
++ Blade syntax was exclusively used
++ I understood every blade call and syntax used
 
 ## 5. Code: General
 Address as many of the following points as applicable:
 
-+ Do you notice any inconsistencies between the code and the course notes on [code style](https://github.com/susanBuck/dwa15-fall2018/blob/master/misc/code-style.md)?
-+ Are there any best practices discussed in course material that you feel were not addressed in the code?
-+ Are there aspects of the code that you feel were not self-evident and would benefit from comments?
-+ Are there any parts of the code that you found interesting/would not have thought to do yourself?
-+ Are there any parts of the code that you don't understand?
++ There were no visible inconsistincies in Chris's code. In fact, everything was nicely indented and easy to follow
++ Most every best practice was seen in the code
++ At least for me, seeing how the dropdown list was populated in such a compact way, would've been helpful if it were commented
++ The way the drop down list was populated. I think I would've listed out every option.
++ Again, the code was well written, nicely indented, and easy to follow. I think it would've been helpful to see comments but the code is written cleanly so it's not entirely necessary.
 
 ## 6. Misc
-Do you have any additional comments not covered in the above questions?
+Great Job Chris!
